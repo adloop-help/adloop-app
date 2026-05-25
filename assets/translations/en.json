@@ -1,0 +1,16 @@
+{
+  "app_title": "AdLoop",
+  "welcome": "Welcome to AdLoop!",
+  "get_started": "Get Started",
+  "home": "Home",
+  "settings": "Settings",
+  "language": "Language",
+  "country": "Country",
+  "pick_language_title": "Choose your language",
+  "pick_country_title": "Choose your country",
+  "save_continue": "Save & Continue",
+  "search_hint": "Search ads (category or keyword)",
+  "location_hint": "Location / Country",
+  "carousel_title": "Top picks for you",
+  "open_in_browser": "Open in browser"
+}

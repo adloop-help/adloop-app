@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "468199843909",
+    "project_id": "adloop-37a83",
+    "storage_bucket": "adloop-37a83.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:468199843909:android:6fdc111e6535c93e9c1b2c",
+        "android_client_info": {
+          "package_name": "com.adloop.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDM28y7JX0wSmxHgxgYrARzOWxo6EZdHY8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

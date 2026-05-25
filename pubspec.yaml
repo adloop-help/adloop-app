@@ -1,0 +1,60 @@
+name: adloop
+
+description: A lightweight ad discovery app (AdLoop).
+
+version: 1.0.0+15
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+  flutter: ">=3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.2
+  google_fonts: ^4.0.4
+  carousel_slider: ^4.2.1
+  google_mobile_ads: ^5.1.0
+  shared_preferences: ^2.2.2
+  http: ^1.1.0
+  url_launcher: ^6.2.5
+  video_player: ^2.8.2
+
+  webview_flutter: ^4.13.1
+  webview_flutter_wkwebview: ^3.12.0
+
+  share_plus: ^7.2.1
+
+  # 🔥 FIREBASE (IMPORTANT)
+  firebase_core: ^2.24.0
+  cloud_firestore: ^4.15.0
+
+  # 🔵 META AUDIENCE NETWORK
+  #easy_audience_network: ^0.0.7
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^2.0.1
+  flutter_launcher_icons: ^0.13.1
+
+# 🔥 Correct icon generation config here
+flutter_launcher_icons:
+  android: true
+  ios: false # set true later when publishing iOS
+  image_path: "assets/images/icon_logo.png"
+  adaptive_icon_background: "#0B3D2E"
+  adaptive_icon_foreground: "assets/images/icon_logo.png"
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/search.png
+    - assets/down-drop-arrow.png
+    - assets/logo.png
+    - assets/images/
+    - assets/videos/
+    - assets/feed_icons/

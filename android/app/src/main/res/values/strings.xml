@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Meta Audience Network App ID -->
+    <string name="facebook_app_id">2241236183314497</string>
+
+</resources>
