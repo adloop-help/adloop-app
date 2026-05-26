@@ -27,8 +27,9 @@ dependencies:
   share_plus: ^7.2.1
 
   # 🔥 FIREBASE (IMPORTANT)
-  firebase_core: ^2.24.0
-  cloud_firestore: ^4.15.0
+  firebase_core: ^3.6.0
+  cloud_firestore: ^5.4.4
+  firebase_auth: ^5.3.1
 
   # 🔵 META AUDIENCE NETWORK
   easy_audience_network: ^0.0.7
