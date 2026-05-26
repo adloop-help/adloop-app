@@ -4,15 +4,19 @@ workflows:
     max_build_duration: 120
     environment:
       flutter: stable
-
     scripts:
-      - flutter pub get
-      - flutter build ios --release --no-codesign
-
+      - name: Configure Flutter
+        script: |
+          flutter config --no-enable-swift-package-manager
+      - name: Get Dependencies
+        script: |
+          flutter pub get
+      - name: Build iOS
+        script: |
+          # Codemagic cleans and installs pods automatically if this fails
+          flutter build ios --release --no-codesign
     artifacts:
       - build/ios/iphoneos/*.app
-      - flutter_drive.log
-
     publishing:
       email:
         recipients:
