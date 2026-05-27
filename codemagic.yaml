@@ -4,20 +4,42 @@ workflows:
 
     environment:
       flutter: stable
+      xcode: latest
 
       ios_signing:
         distribution_type: app_store
-        bundle_identifier: CMTYQTR5LZ.com.example.adloop
+        bundle_identifier: com.example.adloop
 
     integrations:
       app_store_connect: Codemagic
 
     scripts:
-      - name: Get packages
-        script: flutter pub get
+      - name: Flutter Clean
+        script: |
+          flutter clean
+
+      - name: Get Packages
+        script: |
+          flutter pub get
+
+      - name: Install CocoaPods
+        script: |
+          cd ios
+          pod install
+          cd ..
+
+      - name: Set iOS automatic signing
+        script: |
+          xcode-project use-profiles
 
       - name: Build IPA
-        script: flutter build ipa --release
+        script: |
+          flutter build ipa --release
 
     artifacts:
       - build/ios/ipa/*.ipa
+      - /tmp/xcodebuild_logs/*.log
+
+    publishing:
+      app_store_connect:
+        auth: integration
