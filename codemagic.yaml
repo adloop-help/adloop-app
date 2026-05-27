@@ -7,8 +7,14 @@ workflows:
       xcode: latest
 
       ios_signing:
-        distribution_type: app_store
-        bundle_identifier: com.example.adloop
+       distribution_type: app_store
+       bundle_identifier: com.example.adloop
+
+       provisioning_profiles:
+        - AdLoopProductionNew
+
+       certificates:
+        - adloopdistribution
 
     integrations:
       app_store_connect: Codemagic
@@ -28,7 +34,7 @@ workflows:
           pod install
           cd ..
 
-      - name: Set iOS automatic signing
+      - name: Set up code signing
         script: |
           xcode-project use-profiles
 
