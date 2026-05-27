@@ -7,14 +7,11 @@ workflows:
       xcode: latest
 
       ios_signing:
-       distribution_type: app_store
-       bundle_identifier: com.example.adloop
+        provisioning_profiles:
+          - AdLoopProductionNew
 
-       provisioning_profiles:
-        - AdLoopProductionNew
-
-       certificates:
-        - adloopdistribution
+        certificates:
+          - adloopdistribution
 
     integrations:
       app_store_connect: Codemagic
@@ -24,7 +21,7 @@ workflows:
         script: |
           flutter clean
 
-      - name: Get Packages
+      - name: Get Flutter Packages
         script: |
           flutter pub get
 
@@ -38,7 +35,7 @@ workflows:
         script: |
           xcode-project use-profiles
 
-      - name: Build IPA
+      - name: Build iOS IPA
         script: |
           flutter build ipa --release
 
